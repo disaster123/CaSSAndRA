@@ -259,7 +259,7 @@ def update(n_intervals: int,
                                    name='Target',
                                    marker = dict(
                                              size=10, 
-                                             color='green', 
+                                             color='red', 
                                              symbol='cross-thin-open',
                                              line = dict(width=2, color="DarkSlateGrey")
                                              ),
