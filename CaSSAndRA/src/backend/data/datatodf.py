@@ -235,9 +235,8 @@ def add_obstacles_to_df(data: str) -> None:
         del data_list[-1]
         del data_list[0]
         if len(data_list) == 1:
-            if appcfg.obstacles_amount == 0: #Synchronize to sunray fw
-                current_map.obstacles = pd.DataFrame() 
-                return
+            current_map.obstacles = pd.DataFrame() #Mirroring obstacles from Sunray FW
+            return
         obstacles_number = int(data_list[0]) 
         del data_list[0]
         data_list = [float(x) if '.' in x else int(x) for x in data_list]
